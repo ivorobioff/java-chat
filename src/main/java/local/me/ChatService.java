@@ -12,7 +12,8 @@ public class ChatService {
     }
 
     private static Chat startChat() {
-        var bot = new Bot(BotConfiguration.builder().name("dumb").path("src/main/resources").build());
+        var config = BotConfiguration.builder().name("dumb").path("src/main/resources").build();
+        var bot = new Bot(config);
         return new Chat(bot);
     }
 }
